@@ -7,6 +7,7 @@ const pokeDetailName = document.getElementById("name")
 const pokeDetailImage = document.getElementById("poke-image")
 const pokeDetailType = document.getElementById("type")
 const pokedexDetailNumber = document.getElementById("pokedex")
+const pokeCollection = document.getElementById("collection_amount")
 
 //fetches
 fetch(url)
@@ -35,6 +36,7 @@ function pokeDetails(pokemon){
     pokeDetailImage.src = pokemon.image 
     pokeDetailType.textContent = pokemon.type
     pokedexDetailNumber.textContent = pokemon.pokedex
+    pokeCollection.textContent = pokemon.collection_amount
 }
 // //post fetch
 // fetch(url, {
