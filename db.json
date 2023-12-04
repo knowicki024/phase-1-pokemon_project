@@ -1,4 +1,5 @@
-[
+{
+"pokemons": [
     {
       "id": 1,
       "name": "Bulbasaur",
@@ -117,3 +118,4 @@
         "pokedex": "0025"
     }
   ]
+}
