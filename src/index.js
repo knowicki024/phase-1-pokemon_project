@@ -1,10 +1,16 @@
 //DOM elements/ variables
-const url = 'http://127.0.0.1:2000/pokemons'
+const url = ' http://localhost:3000/pokemons'
 const favoriteBtn = document.querySelector('#favorite-poke')
 const newPokeForm = document.querySelector('#poke-form')
 
 //fetches
-
+fetch(url)
+.then(response => response.json())
+.then(pokeData => {
+    pokeData.map(eachPoke => {
+        addPokeToPage(eachPoke)
+    })
+})
 // //post fetch
 // fetch(url, {
 //     method: "POST",
