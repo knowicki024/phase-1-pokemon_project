@@ -2,7 +2,8 @@
 const url = 'http://127.0.0.1:2000/pokemons'
 const favoriteBtn = document.querySelector('#favorite-poke')
 const newPokeForm = document.querySelector('#poke-form')
-
+const deleteBtn = document.getElementById('delete-poke')
+const pokeInfoDiv = document.getElementById('pokemon-info')
 //fetches
 
 // //post fetch
@@ -23,7 +24,7 @@ const newPokeForm = document.querySelector('#poke-form')
 
 //eventlisteners
 //  favoriteBtn.addEventListener('click', toggle)
-
+deleteBtn.addEventListener('click', handleDelete)
 
 
 //render functions
@@ -37,3 +38,7 @@ const newPokeForm = document.querySelector('#poke-form')
     
 // }
 
+function handleDelete(){
+    pokeInfoDiv.remove()
+        alert('Pokemon removed from Collection!')
+    }
