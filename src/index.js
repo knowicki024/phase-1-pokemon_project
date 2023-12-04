@@ -40,5 +40,6 @@ deleteBtn.addEventListener('click', handleDelete)
 
 function handleDelete(){
     pokeInfoDiv.remove()
+    deleteBtn.remove()
         alert('Pokemon removed from Collection!')
     }
