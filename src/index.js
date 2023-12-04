@@ -3,11 +3,16 @@ const url = ' http://localhost:3000/pokemons'
 const favoriteBtn = document.querySelector('#favorite-poke')
 const newPokeForm = document.querySelector('#poke-form')
 
+
 const pokeDetailName = document.getElementById("name")
 const pokeDetailImage = document.getElementById("poke-image")
 const pokeDetailType = document.getElementById("type")
 const pokedexDetailNumber = document.getElementById("pokedex")
 const pokeCollection = document.getElementById("collection_amount")
+
+
+const deleteBtn = document.getElementById('delete-poke')
+const pokeInfoDiv = document.getElementById('pokemon-info')
 
 //fetches
 fetch(url)
@@ -56,7 +61,7 @@ function pokeDetails(pokemon){
 
 //eventlisteners
 //  favoriteBtn.addEventListener('click', toggle)
-
+deleteBtn.addEventListener('click', handleDelete)
 
 
 //render functions
@@ -70,3 +75,8 @@ function pokeDetails(pokemon){
     
 // }
 
+function handleDelete(){
+    pokeInfoDiv.remove()
+    deleteBtn.remove()
+        alert('Pokemon removed from Collection!')
+    }
