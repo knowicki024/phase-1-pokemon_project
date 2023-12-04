@@ -26,4 +26,11 @@ Implement a 'Like' button functionality, allowing users to express admiration fo
 Pokemon Collection Incrementer:
 Introduce a dynamic feature that enables users to increment the count of specific Pokemon in their collection, adding an interactive element to the app.
 
-//getting started
+
+Getting Started
+
+1. Clone the Repository:
+git@github.com:tkim0615/phase-1-pokemon_project.git
+
+2. Open the app:
+open index.html
