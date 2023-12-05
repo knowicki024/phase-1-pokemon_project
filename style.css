@@ -1,0 +1,12 @@
+#logo {
+    width: 80px;
+}
+
+#pokemon-list {
+    display: flex;
+}
+
+#pokemon-list img {
+    width: 200px;
+    height: 200px
+}
