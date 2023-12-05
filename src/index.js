@@ -44,8 +44,8 @@ function pokeDetails(pokemon){
     pokeDetailName.textContent = pokemon.name
     pokeDetailImage.src = pokemon.image 
     pokeDetailType.textContent = pokemon.type
-    pokedexDetailNumber.textContent = pokemon.pokedex
-    pokeCollection.textContent = pokemon.collection_amount
+    pokedexDetailNumber.textContent = "Pokedex: " + pokemon.pokedex
+    pokeCollection.textContent = "Amount in collection: " + pokemon.collection_amount
 }
 function addPokeToPage(pokemon){
     const pokeList = document.getElementById("pokemon-list")
