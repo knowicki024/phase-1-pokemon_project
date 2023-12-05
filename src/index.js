@@ -23,9 +23,6 @@ fetch(url)
 
 
 //eventlisteners
-
-deleteBtn.addEventListener('click', handleDelete)
-
 newPokeForm.addEventListener('submit',(e) =>{
     e.preventDefault()
    let newPokeData = {
