@@ -29,7 +29,6 @@ fetch(url)
     pokeDetails(pokeData[randomArrayIndex])
 
 
-
     const pokeIncrementBtn = document.createElement('button')
     const divBtnElement = document.createElement('div')
     pokeIncrementBtn.textContent = ' + '
@@ -56,11 +55,6 @@ fetch(url)
             })
     })
     
-    
-
-
-
-
 })
 
 //eventlisteners
@@ -86,7 +80,6 @@ newPokeForm.addEventListener('submit',(e) =>{
       .then(newPokeData => {
         addPokeToPage(newPokeData)
         pokeDetails(newPokeData)
-        // pokeDetails[]
       });
       newPokeForm.reset()
 })
@@ -151,7 +144,7 @@ function addPokeToPage(pokemon){
                     pokeDetails(pokeDataCopy[0])
                 }
                 else{
-                    alert('cant delete')
+                    alert('Delete unsuccesful, try again')
                 }
             })
     })

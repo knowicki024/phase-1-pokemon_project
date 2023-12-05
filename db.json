@@ -5,7 +5,7 @@
       "name": "Bulbasaur",
       "type": "Grass",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
-      "collection_amount": 3,
+      "collection_amount": 1,
       "favorite": false,
       "pokedex": "0001"
     },
@@ -14,8 +14,8 @@
       "name": "Ivysaur",
       "type": "Grass",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png",
-      "collection_amount": 4,
-      "favorite": true,
+      "collection_amount": 1,
+      "favorite": false,
       "pokedex": "0002"
     },
     {
@@ -50,7 +50,7 @@
       "name": "Charizard",
       "type": "Fire",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png",
-      "collection_amount": 2,
+      "collection_amount": 1,
       "favorite": false,
       "pokedex": "0006"
     },
@@ -77,7 +77,7 @@
       "name": "Blastoise",
       "type": "Water",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png",
-      "collection_amount": 2,
+      "collection_amount": 1,
       "favorite": true,
       "pokedex": "0009"
     },
@@ -104,7 +104,7 @@
       "name": "Butterfree",
       "type": "Bug",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png",
-      "collection_amount": 2,
+      "collection_amount": 1,
       "favorite": false,
       "pokedex": "0012"
     },
