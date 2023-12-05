@@ -1,8 +1,7 @@
 //DOM elements/ variables
-const url = ' http://localhost:2000/pokemons'
+const url = 'http://localhost:2000/pokemons'
 const favoriteBtn = document.querySelector('#favorite-poke')
 const newPokeForm = document.querySelector('#poke-form')
-
 const pokeDetailName = document.getElementById("name")
 const pokeDetailImage = document.getElementById("poke-image")
 const pokeDetailType = document.getElementById("type")
@@ -11,7 +10,7 @@ const pokeCollection = document.getElementById("collection_amount")
 const deleteBtn = document.getElementById('delete-poke')
 const pokeInfoDiv = document.getElementById('pokemon-info')
 const pokeDetailDiv = document.getElementById('pokemmon-details')
-
+let currentPoke
 //fetches
 fetch(url)
 .then(response => response.json())
@@ -24,7 +23,7 @@ fetch(url)
 
 
 //eventlisteners
-//  favoriteBtn.addEventListener('click', toggle)
+
 deleteBtn.addEventListener('click', handleDelete)
 
 newPokeForm.addEventListener('submit',(e) =>{
@@ -49,9 +48,26 @@ newPokeForm.addEventListener('submit',(e) =>{
       newPokeForm.reset()
 })
 
+ favoriteBtn.addEventListener('click', (e)=>{
+    currentPoke.favorite = !currentPoke.favorite
+    let updatedFav = {
+        favorite: currentPoke.favorite
+    }
+    fetch(`http://localhost:2000/pokemons/${currentPoke.id}`,{
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(updatedFav)
+    })
+        .then(resp => resp.json())
+        .then(updatedFavorite => {
+            favoriteBtn.textContent = updatedFavorite.favorite? "Unfavorite": "Favorite"
+        })    
+ })
+
 
 //render functions
 function pokeDetails(pokemon){
+    currentPoke = pokemon
     pokeDetailName.textContent = pokemon.name
     pokeDetailImage.src = pokemon.image 
     pokeDetailType.textContent = pokemon.type
@@ -69,17 +85,3 @@ function addPokeToPage(pokemon){
         pokeDetails(pokemon)
     })
 }
-
-//callback functions
-// // function toggle(e){
-//     // e.target.textContent =! e.target.textContent
-//     // e.target.textContent = e.target.textContent ? "Favorite" : "Not Favorite"
-    
-// }
-
-
-function handleDelete(){
-    
-    
-        // alert('Pokemon removed from Collection!')
-    }

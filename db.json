@@ -6,7 +6,7 @@
       "type": "Grass",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
       "collection_amount": 1,
-      "favorite": false,
+      "favorite": true,
       "pokedex": "0001"
     },
     {
