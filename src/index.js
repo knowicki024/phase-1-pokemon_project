@@ -27,7 +27,10 @@ newPokeForm.addEventListener('submit',(e) =>{
    let newPokeData = {
     name: e.target[0].value,
     type: e.target[1].value,
-    image: e.target[2].value
+    image: e.target[2].value, 
+    collection_amount: e.target[3].value,
+    favorite: JSON.parse(e.target[4].value),
+    pokedex: e.target[5].value
    }
 
    fetch(url, {
