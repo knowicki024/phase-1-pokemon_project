@@ -31,7 +31,7 @@ fetch(url)
 
     const pokeIncrementBtn = document.createElement('button')
     const divBtnElement = document.createElement('div')
-    pokeIncrementBtn.textContent = ' + '
+    pokeIncrementBtn.textContent = ' Add to collection '
     
     divBtnElement.appendChild(pokeIncrementBtn)
     pokeDetailDiv.appendChild(divBtnElement)
