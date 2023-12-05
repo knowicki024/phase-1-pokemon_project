@@ -1,5 +1,5 @@
 //DOM elements/ variables
-const url = 'http://localhost:2000/pokemons'
+const url = 'http://localhost:4000/pokemons'
 const favoriteBtn = document.querySelector('#favorite-poke')
 const newPokeForm = document.querySelector('#poke-form')
 const pokeDetailName = document.getElementById("name")
@@ -20,7 +20,6 @@ fetch(url)
     })
     pokeDetails(pokeData[0])
 })
-
 
 //eventlisteners
 newPokeForm.addEventListener('submit',(e) =>{
@@ -50,7 +49,7 @@ newPokeForm.addEventListener('submit',(e) =>{
     let updatedFav = {
         favorite: currentPoke.favorite
     }
-    fetch(`http://localhost:2000/pokemons/${currentPoke.id}`,{
+    fetch(`http://localhost:4000/pokemons/${currentPoke.id}`,{
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedFav)
