@@ -1,5 +1,5 @@
 {
-"pokemons": [
+  "pokemons": [
     {
       "id": 1,
       "name": "Bulbasaur",
@@ -10,112 +10,260 @@
       "pokedex": "0001"
     },
     {
-        "id": 2,
-        "name": "Ivysaur",
-        "type": "Grass",
-        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png",
-        "collection_amount": 1,
-        "favorite": false,
-        "pokedex": "0002"
+      "id": 2,
+      "name": "Ivysaur",
+      "type": "Grass",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png",
+      "collection_amount": 1,
+      "favorite": false,
+      "pokedex": "0002"
     },
     {
-        "id": 3,
-        "name": "Venusaur",
-        "type": "Grass",
-        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png",
-        "collection_amount": 1,
-        "favorite": false,
-        "pokedex": "0003"
+      "id": 3,
+      "name": "Venusaur",
+      "type": "Grass",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png",
+      "collection_amount": 1,
+      "favorite": false,
+      "pokedex": "0003"
     },
     {
-        "id": 4,
-        "name": "Charmander",
-        "type": "Fire",
-        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
-        "collection_amount": 1,
-        "favorite": false,
-        "pokedex": "0004"
+      "id": 4,
+      "name": "Charmander",
+      "type": "Fire",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
+      "collection_amount": 1,
+      "favorite": false,
+      "pokedex": "0004"
     },
     {
-        "id": 5,
-        "name": "Charmeleon",
-        "type": "Fire",
-        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png",
-        "collection_amount": 1,
-        "favorite": false,
-        "pokedex": "0005"
+      "id": 5,
+      "name": "Charmeleon",
+      "type": "Fire",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png",
+      "collection_amount": 1,
+      "favorite": false,
+      "pokedex": "0005"
     },
     {
-        "id": 6,
-        "name": "Charizard",
-        "type": "Fire",
-        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png",
-        "collection_amount": 1,
-        "favorite": false,
-        "pokedex": "0006"
+      "id": 6,
+      "name": "Charizard",
+      "type": "Fire",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png",
+      "collection_amount": 1,
+      "favorite": false,
+      "pokedex": "0006"
     },
     {
-        "id": 7,
-        "name": "Squirtle",
-        "type": "Water",
-        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
-        "collection_amount": 1,
-        "favorite": false,
-        "pokedex": "0007"
+      "id": 7,
+      "name": "Squirtle",
+      "type": "Water",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
+      "collection_amount": 1,
+      "favorite": false,
+      "pokedex": "0007"
     },
     {
-        "id": 8,
-        "name": "Wartortle",
-        "type": "Water",
-        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png",
-        "collection_amount": 1,
-        "favorite": false,
-        "pokedex": "0008"
+      "id": 8,
+      "name": "Wartortle",
+      "type": "Water",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png",
+      "collection_amount": 1,
+      "favorite": false,
+      "pokedex": "0008"
     },
     {
-        "id": 9,
-        "name": "Blastoise",
-        "type": "Water",
-        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png",
-        "collection_amount": 1,
-        "favorite": false,
-        "pokedex": "0009"
+      "id": 9,
+      "name": "Blastoise",
+      "type": "Water",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png",
+      "collection_amount": 1,
+      "favorite": false,
+      "pokedex": "0009"
     },
     {
-        "id": 10,
-        "name": "Caterpie",
-        "type": "Bug",
-        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png",
-        "collection_amount": 1,
-        "favorite": false,
-        "pokedex": "0010"
+      "id": 10,
+      "name": "Caterpie",
+      "type": "Bug",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png",
+      "collection_amount": 1,
+      "favorite": false,
+      "pokedex": "0010"
     },
     {
-        "id": 11,
-        "name": "Metapod",
-        "type": "Bug",
-        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png",
-        "collection_amount": 1,
-        "favorite": false,
-        "pokedex": "0011"
+      "id": 11,
+      "name": "Metapod",
+      "type": "Bug",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png",
+      "collection_amount": 1,
+      "favorite": false,
+      "pokedex": "0011"
     },
     {
-        "id": 12,
-        "name": "Butterfree",
-        "type": "Bug",
-        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png",
-        "collection_amount": 1,
-        "favorite": false,
-        "pokedex": "0012"
+      "id": 12,
+      "name": "Butterfree",
+      "type": "Bug",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png",
+      "collection_amount": 1,
+      "favorite": false,
+      "pokedex": "0012"
     },
     {
-        "id": 13,
-        "name": "Pikachu",
-        "type": "Electric",
-        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
-        "collection_amount": 1,
-        "favorite": false,
-        "pokedex": "0025"
+      "id": 13,
+      "name": "Pikachu",
+      "type": "Electric",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
+      "collection_amount": 1,
+      "favorite": false,
+      "pokedex": "0025"
+    },
+    {
+      "name": "Machop ",
+      "type": "Fighiting",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/066.png",
+      "id": 14
+    },
+    {
+      "name": "",
+      "type": "",
+      "image": "",
+      "id": 15
+    },
+    {
+      "name": "ma",
+      "type": "ma",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/066.png",
+      "id": 16
+    },
+    {
+      "name": "asd",
+      "type": "asd",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/066.png",
+      "id": 17
+    },
+    {
+      "name": "asd",
+      "type": "asd",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/066.png",
+      "id": 18
+    },
+    {
+      "name": "asd",
+      "type": "asd",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/066.png",
+      "id": 19
+    },
+    {
+      "name": "as",
+      "type": "asd",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/066.png",
+      "id": 20
+    },
+    [
+      {
+        "name": "asd",
+        "type": "asd",
+        "image": "2"
+      }
+    ],
+    [
+      {
+        "name": "asd",
+        "type": "asd",
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/066.png"
+      }
+    ],
+    [
+      {
+        "name": "asd",
+        "type": "asd",
+        "image": "asd"
+      }
+    ],
+    [
+      {
+        "name": "asd",
+        "type": "asd",
+        "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/066.png"
+      }
+    ],
+    {
+      "name": "",
+      "type": "",
+      "image": "",
+      "id": 25
+    },
+    {
+      "name": "newpoke",
+      "type": "poke",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/044.png",
+      "id": 26
+    },
+    {
+      "name": "asd",
+      "type": "asd",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/066.png",
+      "id": 27
+    },
+    {
+      "name": "asd",
+      "type": "asd",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/066.png",
+      "id": 28
+    },
+    {
+      "name": "asd",
+      "type": "asd",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/066.png",
+      "id": 29
+    },
+    {
+      "name": "asadsd",
+      "type": "asdasdasd",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/066.png",
+      "id": 30
+    },
+    {
+      "name": "",
+      "type": "",
+      "image": "",
+      "id": 31
+    },
+    {
+      "name": "",
+      "type": "",
+      "image": "",
+      "id": 32
+    },
+    {
+      "name": "",
+      "type": "",
+      "image": "",
+      "id": 33
+    },
+    {
+      "name": "asd",
+      "type": "asdasd",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/066.png",
+      "id": 34
+    },
+    {
+      "name": "asd",
+      "type": "asdasd",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/066.png",
+      "id": 35
+    },
+    {
+      "name": "asd",
+      "type": "asdasd",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/066.png",
+      "id": 36
+    },
+    {
+      "name": "asd",
+      "type": "asd",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/066.png",
+      "id": 37
     }
   ]
 }

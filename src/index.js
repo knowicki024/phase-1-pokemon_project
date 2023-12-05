@@ -10,6 +10,7 @@ const pokedexDetailNumber = document.getElementById("pokedex")
 const pokeCollection = document.getElementById("collection_amount")
 const deleteBtn = document.getElementById('delete-poke')
 const pokeInfoDiv = document.getElementById('pokemon-info')
+const pokeDetailDiv = document.getElementById('pokemmon-details')
 
 //fetches
 fetch(url)
@@ -21,22 +22,32 @@ fetch(url)
     pokeDetails(pokeData[0])
 })
 
-// //post fetch
-// fetch(url, {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify(data),
-//   })
-//   .then(response => response.json())
-//   .then(data => console.log(data));
-
-
 
 //eventlisteners
 //  favoriteBtn.addEventListener('click', toggle)
 deleteBtn.addEventListener('click', handleDelete)
+
+newPokeForm.addEventListener('submit',(e) =>{
+    e.preventDefault()
+   let newPokeData = {
+    name: e.target[0].value,
+    type: e.target[1].value,
+    image: e.target[2].value
+   }
+
+   fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newPokeData),
+      })
+      .then(response => response.json())
+      .then(newPokeData => {
+        addPokeToPage(newPokeData)
+      });
+      newPokeForm.reset()
+})
 
 
 //render functions
@@ -46,6 +57,7 @@ function pokeDetails(pokemon){
     pokeDetailType.textContent = pokemon.type
     pokedexDetailNumber.textContent = "Pokedex: " + pokemon.pokedex
     pokeCollection.textContent = "Amount in collection: " + pokemon.collection_amount
+    favoriteBtn.textContent = pokemon.favorite ? "Unfavorite": "Favorite"
 }
 function addPokeToPage(pokemon){
     const pokeList = document.getElementById("pokemon-list")
@@ -65,8 +77,9 @@ function addPokeToPage(pokemon){
     
 // }
 
+
 function handleDelete(){
-    pokeInfoDiv.remove()
-    deleteBtn.remove()
-        alert('Pokemon removed from Collection!')
+    
+    
+        // alert('Pokemon removed from Collection!')
     }
