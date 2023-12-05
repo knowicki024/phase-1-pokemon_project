@@ -11,10 +11,12 @@ const deleteBtn = document.getElementById('delete-poke')
 const pokeInfoDiv = document.getElementById('pokemon-info')
 const pokeDetailDiv = document.getElementById('pokemmon-details')
 let currentPoke
+let pokeDataCopy
 //fetches
 fetch(url)
 .then(response => response.json())
 .then(pokeData => {
+    pokeDataCopy = pokeData
     pokeData.map(eachPoke => {
         addPokeToPage(eachPoke)
     })
@@ -77,10 +79,40 @@ function pokeDetails(pokemon){
 function addPokeToPage(pokemon){
     const pokeList = document.getElementById("pokemon-list")
     const pokeImage = document.createElement("img")
+    const pokeDelBtn = document.createElement('button')
+    const divElement = document.createElement('div')
+    pokeDelBtn.textContent = 'Lost in battle'
+    
     pokeImage.src = pokemon.image 
-    pokeList.appendChild(pokeImage)
+    divElement.append(pokeDelBtn)
+    divElement.append(pokeImage)
+
+    pokeList.appendChild(divElement)
 
     pokeImage.addEventListener("click", () => {
         pokeDetails(pokemon)
+    })
+
+    pokeDelBtn.addEventListener('click', () =>{
+        fetch(`http://localhost:4000/pokemons/${currentPoke.id}`, {
+            method: 'DELETE'
+        })
+            .then(response => {
+                if(response.ok){
+                    pokeDataCopy = pokeDataCopy.filter(f=>{
+                        return pokemon.id !== f.id
+                    })
+                    addPokeToPage(pokeDataCopy)
+                }
+                else{
+                    alert('cant delete')
+                }
+            })
+        // pokeDetailName.textContent = ' '
+        // pokeDetailImage.src = ' '
+        // pokeDetailType.textContent = ' '
+        // pokedexDetailNumber.textContent = ' '
+        // pokeCollection.textContent = ' '
+
     })
 }
