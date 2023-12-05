@@ -6,7 +6,7 @@
       "type": "Grass",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
       "collection_amount": 1,
-      "favorite": true,
+      "favorite": false,
       "pokedex": "0001"
     },
     {
@@ -116,6 +116,15 @@
       "collection_amount": 1,
       "favorite": false,
       "pokedex": "0025"
+    },
+    {
+      "name": "paras",
+      "type": "grass",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/046.png",
+      "collection_amount": "1",
+      "favorite": true,
+      "pokedex": "0055",
+      "id": 14
     }
   ]
 }

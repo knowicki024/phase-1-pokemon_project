@@ -10,6 +10,8 @@ const pokeCollection = document.getElementById("collection_amount")
 const deleteBtn = document.getElementById('delete-poke')
 const pokeInfoDiv = document.getElementById('pokemon-info')
 const pokeDetailDiv = document.getElementById('pokemmon-details')
+const pokeList = document.getElementById("pokemon-list")
+
 let currentPoke
 let pokeDataCopy
 //fetches
@@ -45,6 +47,8 @@ newPokeForm.addEventListener('submit',(e) =>{
       .then(response => response.json())
       .then(newPokeData => {
         addPokeToPage(newPokeData)
+        pokeDetails(newPokeData)
+        // pokeDetails[]
       });
       newPokeForm.reset()
 })
@@ -73,11 +77,10 @@ function pokeDetails(pokemon){
     pokeDetailImage.src = pokemon.image 
     pokeDetailType.textContent = pokemon.type
     pokedexDetailNumber.textContent = "Pokedex: " + pokemon.pokedex
-    pokeCollection.textContent = "Amount in collection: " + pokemon.collection_amount
+    pokeCollection.textContent = "Amount in collection: " + parseInt(pokemon.collection_amount)
     favoriteBtn.textContent = pokemon.favorite ? "Unfavorite": "Favorite"
 }
 function addPokeToPage(pokemon){
-    const pokeList = document.getElementById("pokemon-list")
     const pokeImage = document.createElement("img")
     const pokeDelBtn = document.createElement('button')
     const divElement = document.createElement('div')
@@ -93,26 +96,31 @@ function addPokeToPage(pokemon){
         pokeDetails(pokemon)
     })
 
-    pokeDelBtn.addEventListener('click', () =>{
-        fetch(`http://localhost:4000/pokemons/${currentPoke.id}`, {
+    pokeDelBtn.addEventListener('click', (e) =>{
+        fetch(`http://localhost:4000/pokemons/${pokemon.id}`, {
             method: 'DELETE'
         })
             .then(response => {
                 if(response.ok){
-                    pokeDataCopy = pokeDataCopy.filter(f=>{
-                        return pokemon.id !== f.id
+                    pokeDataCopy = pokeDataCopy.filter(p=>{
+                        return pokemon.id !== p.id
                     })
-                    addPokeToPage(pokeDataCopy)
+                    console.log(pokeDataCopy)
+
+                    updateImageNav(pokeDataCopy)
+                    pokeDetails(pokeDataCopy[0])
                 }
                 else{
                     alert('cant delete')
                 }
             })
-        // pokeDetailName.textContent = ' '
-        // pokeDetailImage.src = ' '
-        // pokeDetailType.textContent = ' '
-        // pokedexDetailNumber.textContent = ' '
-        // pokeCollection.textContent = ' '
-
     })
+}
+
+
+function updateImageNav(pokeDataCopy){
+   pokeList.innerHTML = ' '
+   pokeDataCopy.forEach(pokemon => {
+    addPokeToPage(pokemon)
+   })
 }
