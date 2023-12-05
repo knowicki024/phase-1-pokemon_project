@@ -33,7 +33,7 @@
       "type": "Fire",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
       "collection_amount": 1,
-      "favorite": false,
+      "favorite": true,
       "pokedex": "0004"
     },
     {
@@ -114,17 +114,8 @@
       "type": "Electric",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
       "collection_amount": 1,
-      "favorite": false,
-      "pokedex": "0025"
-    },
-    {
-      "name": "paras",
-      "type": "grass",
-      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/046.png",
-      "collection_amount": "1",
       "favorite": true,
-      "pokedex": "0055",
-      "id": 14
+      "pokedex": "0025"
     }
   ]
 }

@@ -8,9 +8,12 @@ const pokeDetailType = document.getElementById("type")
 const pokedexDetailNumber = document.getElementById("pokedex")
 const pokeCollection = document.getElementById("collection_amount")
 const deleteBtn = document.getElementById('delete-poke')
+deleteBtn.remove()
 const pokeInfoDiv = document.getElementById('pokemon-info')
 const pokeDetailDiv = document.getElementById('pokemmon-details')
 const pokeList = document.getElementById("pokemon-list")
+const pokeAmountString = document.getElementById('amount')
+pokeAmountString.remove()
 
 let currentPoke
 let pokeDataCopy
@@ -22,7 +25,8 @@ fetch(url)
     pokeData.map(eachPoke => {
         addPokeToPage(eachPoke)
     })
-    pokeDetails(pokeData[0])
+    let randomArrayIndex = Math.floor((Math.random() * pokeData.length))
+    pokeDetails(pokeData[randomArrayIndex])
 })
 
 //eventlisteners
@@ -116,7 +120,6 @@ function addPokeToPage(pokemon){
             })
     })
 }
-
 
 function updateImageNav(pokeDataCopy){
    pokeList.innerHTML = ' '
