@@ -1,5 +1,5 @@
 //DOM elements/ variables
-const url = 'http://localhost:4000/pokemons'
+const url = 'http://localhost:3000/pokemons'
 const favoriteBtn = document.querySelector('#favorite-poke')
 const newPokeForm = document.querySelector('#poke-form')
 const pokeDetailName = document.getElementById("name")
