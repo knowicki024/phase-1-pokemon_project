@@ -116,42 +116,6 @@
       "collection_amount": 1,
       "favorite": false,
       "pokedex": "0025"
-    },
-    {
-      "name": "Gloom",
-      "type": "Fire",
-      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/044.png",
-      "collection_amount": "1",
-      "favorite": "True",
-      "pokedex": {},
-      "id": 14
-    },
-    {
-      "name": "ss",
-      "type": "ss",
-      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/044.png",
-      "collection_amount": "2",
-      "favorite": false,
-      "pokedex": null,
-      "id": 15
-    },
-    {
-      "name": "asd",
-      "type": "asd",
-      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/044.png",
-      "collection_amount": "asd",
-      "favorite": "false",
-      "pokedex": "0044",
-      "id": 16
-    },
-    {
-      "name": "asdasd",
-      "type": "asd",
-      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/044.png",
-      "collection_amount": "22",
-      "favorite": false,
-      "pokedex": "00522",
-      "id": 17
     }
   ]
 }
