@@ -9,7 +9,7 @@ Users can easily add new entries to their Pokemon collection, allowing them to b
 A straightforward feature that enables users to view their entire Pokemon collection at a glance, offering a quick overview of their acquired Pokemon.
 
 **Like Pokemon (PATCH):**
-**Users have the ability to express their preferences by liking specific Pokemon, adding a personalized touch to their collection.
+Users have the ability to express their preferences by liking specific Pokemon, adding a personalized touch to their collection.
 
 **Delete Pokemon (DELETE):**
 To ensure an organized and clutter-free collection, users can effortlessly remove unwanted Pokemon entries, streamlining their collection management.
@@ -20,7 +20,7 @@ To ensure an organized and clutter-free collection, users can effortlessly remov
 CSS Enhancement:
 Utilize advanced CSS techniques to create an aesthetically pleasing and responsive user interface.
 
-Like Button:
+Favorite Button:
 Implement a 'Favorite' button functionality, allowing users to express admiration for particular Pokemon and enhancing user engagement.
 
 Pokemon Collection Incrementer:
