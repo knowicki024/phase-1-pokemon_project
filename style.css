@@ -16,3 +16,8 @@ body {
     width: 200px;
     height: 200px
 }
+
+div button {
+    font-family: 'Exo', sans-serif;
+    font-family: 'Exo 2', sans-serif;
+}
