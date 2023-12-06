@@ -17,30 +17,32 @@ pokeAmountString.remove()
 
 let currentPoke
 let pokeDataCopy
-//fetches
-fetch(url)
-.then(response => response.json())
-.then(pokeData => {
-    pokeDataCopy = pokeData
-    pokeData.map(eachPoke => {
-        addPokeToPage(eachPoke)
+
+fetch(url)  //get fetch
+    .then(response => response.json())
+    .then(pokeData => {
+        pokeDataCopy = pokeData
+        pokeData.map(eachPoke => {
+        addPokeToMenu(eachPoke)
     })
-    let randomArrayIndex = Math.floor((Math.random() * pokeData.length))
-    pokeDetails(pokeData[randomArrayIndex])  
+        let randomArrayIndex = Math.floor((Math.random() * pokeData.length)) // stretch: render random poke
+        pokeDetails(pokeData[randomArrayIndex])  
 })
 
-//eventlisteners
+//event handler #1
 newPokeForm.addEventListener('submit',(e) =>{
     e.preventDefault()
-   let newPokeData = {
-    name: e.target[0].value,
-    type: e.target[1].value,
-    image: e.target[2].value, 
-    collection_amount: e.target[3].value,
-    favorite: JSON.parse(e.target[4].value),
-    pokedex: e.target[5].value
+    let newPokeData = 
+    {
+        name: e.target[0].value,
+        type: e.target[1].value,
+        image: e.target[2].value, 
+        collection_amount: e.target[3].value,
+        favorite: JSON.parse(e.target[4].value),
+        pokedex: e.target[5].value
    }
-   fetch(url, {
+   fetch(url, // post fetch
+    {      
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -49,17 +51,19 @@ newPokeForm.addEventListener('submit',(e) =>{
       })
       .then(response => response.json())
       .then(newPokeData => {
-        addPokeToPage(newPokeData)
+        addPokeToMenu(newPokeData)
         pokeDetails(newPokeData)
       });
       newPokeForm.reset()
 })
- favoriteBtn.addEventListener('click', (e)=>{
+//event handler #2
+favoriteBtn.addEventListener('click', (e)=>{
     currentPoke.favorite = !currentPoke.favorite
     let updatedFav = {
         favorite: currentPoke.favorite
     }
-    fetch(`http://localhost:4000/pokemons/${currentPoke.id}`,{
+    // patch fetch
+    fetch(`http://localhost:4000/pokemons/${currentPoke.id}`,{  
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedFav)
@@ -72,7 +76,6 @@ newPokeForm.addEventListener('submit',(e) =>{
 //render functions
 function pokeDetails(pokemon){
     currentPoke = pokemon
-   
     pokeDetailName.textContent = pokemon.name
     pokeDetailImage.src = pokemon.image 
     pokeDetailType.textContent = pokemon.type
@@ -81,7 +84,7 @@ function pokeDetails(pokemon){
     favoriteBtn.textContent = pokemon.favorite ? "Favorited! Click to unfavorite": "Unfavorited! Click to favorite"
 
 }
-function addPokeToPage(pokemon){
+function addPokeToMenu(pokemon){
     const pokeImage = document.createElement("img")
     const pokeDelBtn = document.createElement('button')
     const divElement = document.createElement('div')
@@ -93,11 +96,11 @@ function addPokeToPage(pokemon){
     divElement.append(pokeDelBtn)
     divElement.append(pokeImage, pokeName)
     pokeList.appendChild(divElement)
-
+    // #3 event handler
     pokeImage.addEventListener("click", () => {
         pokeDetails(pokemon)
     })
-
+    // #4 event handler
     pokeDelBtn.addEventListener('click', (e) =>{
         fetch(`http://localhost:4000/pokemons/${pokemon.id}`, {
             method: 'DELETE'
@@ -120,26 +123,8 @@ function addPokeToPage(pokemon){
 function updateImageNav(pokeDataCopy){
    pokeList.innerHTML = ' '
    pokeDataCopy.forEach(pokemon => {
-    addPokeToPage(pokemon)
+    addPokeToMenu(pokemon)
    })
-}
-
-
-function incrementCollection(){
-    let currentCollectionAmt = Number(pokeCollection.textContent.slice(-2))
-        currentCollectionAmt += 1
-        currentPoke.collection_amount = currentCollectionAmt
-        let updatedCollectionData = {
-            collection_amount : currentCollectionAmt
-        }
-        fetch(`http://localhost:4000/pokemons/${currentPoke.id}`,{
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(updatedCollectionData)
-        })
-            .then(resp => resp.json())
-            .then(updatedCollection => pokeCollection.textContent = `Amount in collection: ${updatedCollection.collection_amount}` 
-            )
 }
 
 
@@ -149,10 +134,29 @@ function createIncrementBtn(){
     pokeIncrementBtn.textContent = ' Add to collection '
     divBtnElement.appendChild(pokeIncrementBtn)
     pokeDetailDiv.appendChild(divBtnElement)
-
+    // #4 event handler
     pokeIncrementBtn.addEventListener('click', () =>{
         incrementCollection()
     })
+}
+
+function incrementCollection(){
+    let currentCollectionAmt = Number(pokeCollection.textContent.slice(-2))
+    currentCollectionAmt += 1
+    currentPoke.collection_amount = currentCollectionAmt
+    let updatedCollectionData = {
+            collection_amount : currentCollectionAmt
+    }
+    fetch(`http://localhost:4000/pokemons/${currentPoke.id}`,    //2nd patch fetch
+    {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(updatedCollectionData)
+    }
+    )
+        .then(resp => resp.json())
+        .then(updatedCollection => pokeCollection.textContent = `Amount in collection: ${updatedCollection.collection_amount}` 
+        )
 }
 createIncrementBtn()
 

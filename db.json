@@ -5,7 +5,7 @@
       "name": "Bulbasaur",
       "type": "Grass",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
-      "collection_amount": 1,
+      "collection_amount": 13,
       "favorite": true,
       "pokedex": "0001"
     },
@@ -14,7 +14,7 @@
       "name": "Ivysaur",
       "type": "Grass",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png",
-      "collection_amount": 1,
+      "collection_amount": 3,
       "favorite": false,
       "pokedex": "0002"
     },
@@ -107,6 +107,15 @@
       "collection_amount": 1,
       "favorite": false,
       "pokedex": "0025"
+    },
+    {
+      "name": "Braviary ",
+      "type": "Flying",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/628.png",
+      "collection_amount": "2",
+      "favorite": false,
+      "pokedex": "0628",
+      "id": 14
     }
   ]
 }
