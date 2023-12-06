@@ -26,33 +26,7 @@ fetch(url)
         addPokeToPage(eachPoke)
     })
     let randomArrayIndex = Math.floor((Math.random() * pokeData.length))
-    pokeDetails(pokeData[randomArrayIndex])
-
-    const pokeIncrementBtn = document.createElement('button')
-    const divBtnElement = document.createElement('div')
-    pokeIncrementBtn.textContent = ' Add to collection '
-    
-    divBtnElement.appendChild(pokeIncrementBtn)
-    pokeDetailDiv.appendChild(divBtnElement)
-    pokeIncrementBtn.addEventListener('click', () =>{
-        //grab current amt element. get its text content. set new amount as += and set its text ceocent
-        let currentCollectionAmt = Number(pokeCollection.textContent.slice(-1))
-        currentCollectionAmt += 1
-        currentPoke.collection_amount = currentCollectionAmt
-        let updatedCollectionData = {
-            collection_amount : currentCollectionAmt
-        }
-
-        fetch(`http://localhost:4000/pokemons/${currentPoke.id}`,{
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(updatedCollectionData)
-        })
-            .then(resp => resp.json(0))
-            .then(updatedCollection => {
-                pokeCollection.textContent = `Amount in collection ${updatedCollection.collection_amount}` 
-            })
-    })  
+    pokeDetails(pokeData[randomArrayIndex])  
 })
 
 //eventlisteners
@@ -151,5 +125,34 @@ function updateImageNav(pokeDataCopy){
 }
 
 
+function incrementCollection(){
+    let currentCollectionAmt = Number(pokeCollection.textContent.slice(-2))
+        currentCollectionAmt += 1
+        currentPoke.collection_amount = currentCollectionAmt
+        let updatedCollectionData = {
+            collection_amount : currentCollectionAmt
+        }
+        fetch(`http://localhost:4000/pokemons/${currentPoke.id}`,{
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(updatedCollectionData)
+        })
+            .then(resp => resp.json())
+            .then(updatedCollection => pokeCollection.textContent = `Amount in collection: ${updatedCollection.collection_amount}` 
+            )
+}
 
+
+function createIncrementBtn(){
+    const pokeIncrementBtn = document.createElement('button')
+    const divBtnElement = document.createElement('div')
+    pokeIncrementBtn.textContent = ' Add to collection '
+    divBtnElement.appendChild(pokeIncrementBtn)
+    pokeDetailDiv.appendChild(divBtnElement)
+
+    pokeIncrementBtn.addEventListener('click', () =>{
+        incrementCollection()
+    })
+}
+createIncrementBtn()
 
