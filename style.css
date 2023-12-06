@@ -1,7 +1,8 @@
 body {
-    background-color: #3466AF;
-    color: #FFCB05;
+    background-color:#0075BE;
+    color: #FFCC00;
     font-family: "Pokemon Solid";
+    font-size: 30px;
 }
 
 body h1 {
@@ -20,6 +21,66 @@ body h1 {
 }
 
 #pokemon-list img {
+    width: 200px;
+    height: 200px
+}
+#form-section {
+    position: absolute;
+    top: 30%;
+    right: 0;
+    left:100px;
+    transform: translateY(40%);
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+button {
+    border: 0;
+    width:200px;
+    color: #FF0000;
+    background: #FFCC00; 
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: "Pokemon Solid";
+}
+
+
+input[type=text] {
+    position: inline-block;
+    top: 10px;
+    right: 18px;
+    display:inline-block;
+    border: 0;
+    width:75%;
+    color: black;
+    background: white; 
+    padding: 10px;
+    border-radius: 40px;
+    font-size: 15px;
+    font-family: "Pokemon Solid";
+    box-sizing: border-box;
+}
+input[type=submit] {
+    display:inline-block;
+    border: 0;
+    width:75%;
+    color: #FF0000;
+    background: #FFCC00; 
+    padding: 10px;
+    border-radius: 40px;
+    font-size: 15px;
+    font-family: "Pokemon Solid";
+    box-sizing: border-box;
+    margin-top: 10px;
     width: 160px;
     height: 160px
 }
