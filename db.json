@@ -60,7 +60,7 @@
       "type": "Water",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png",
       "collection_amount": 1,
-      "favorite": false,
+      "favorite": true,
       "pokedex": "0008"
     },
     {
@@ -96,7 +96,7 @@
       "type": "Bug",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png",
       "collection_amount": 1,
-      "favorite": false,
+      "favorite": true,
       "pokedex": "0012"
     },
     {

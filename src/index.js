@@ -96,7 +96,7 @@ newPokeForm.addEventListener('submit',(e) =>{
     })
         .then(resp => resp.json())
         .then(updatedFavorite => {
-            favoriteBtn.textContent = updatedFavorite.favorite? "Unfavorite": "Favorite"
+            favoriteBtn.textContent = updatedFavorite.favorite? "Favorited! Click to unfavorite": "Unfavorited! Click to favorite"
         })    
  })
 
@@ -110,7 +110,7 @@ function pokeDetails(pokemon){
     pokeDetailType.textContent = pokemon.type
     pokedexDetailNumber.textContent = "Pokedex: " + pokemon.pokedex
     pokeCollection.textContent = "Amount in collection: " + parseInt(pokemon.collection_amount)
-    favoriteBtn.textContent = pokemon.favorite ? "Unfavorite": "Favorite"
+    favoriteBtn.textContent = pokemon.favorite ? "Favorited! Click to unfavorite": "Unfavorited! Click to favorite"
 
 }
 function addPokeToPage(pokemon){
