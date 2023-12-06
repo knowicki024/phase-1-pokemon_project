@@ -14,7 +14,6 @@ const pokeDetailDiv = document.getElementById('pokemmon-details')
 const pokeList = document.getElementById("pokemon-list")
 const pokeAmountString = document.getElementById('amount')
 pokeAmountString.remove()
-
 let currentPoke
 let pokeDataCopy
 
@@ -28,7 +27,6 @@ fetch(url)  //get fetch
         let randomArrayIndex = Math.floor((Math.random() * pokeData.length)) // stretch: render random poke
         pokeDetails(pokeData[randomArrayIndex])  
 })
-
 //event handler #1
 newPokeForm.addEventListener('submit',(e) =>{
     e.preventDefault()
@@ -37,8 +35,8 @@ newPokeForm.addEventListener('submit',(e) =>{
         name: e.target[0].value,
         type: e.target[1].value,
         image: e.target[2].value, 
-        collection_amount: e.target[3].value,
-        favorite: JSON.parse(e.target[4].value),
+        collection_amount: Number(e.target[3].value),
+        favorite: Boolean(e.target[4].value),
         pokedex: e.target[5].value
    }
    fetch(url, // post fetch
@@ -124,9 +122,7 @@ function updateImageNav(pokeDataCopy){
    pokeList.innerHTML = ' '
    pokeDataCopy.forEach(pokemon => {
     addPokeToMenu(pokemon)
-   })
-}
-
+   })}
 
 function createIncrementBtn(){
     const pokeIncrementBtn = document.createElement('button')
@@ -137,8 +133,7 @@ function createIncrementBtn(){
     // #4 event handler
     pokeIncrementBtn.addEventListener('click', () =>{
         incrementCollection()
-    })
-}
+    })}
 
 function incrementCollection(){
     let currentCollectionAmt = Number(pokeCollection.textContent.slice(-2))
@@ -156,7 +151,6 @@ function incrementCollection(){
     )
         .then(resp => resp.json())
         .then(updatedCollection => pokeCollection.textContent = `Amount in collection: ${updatedCollection.collection_amount}` 
-        )
-}
+        )}
 createIncrementBtn()
 
