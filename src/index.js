@@ -52,8 +52,7 @@ fetch(url)
             .then(updatedCollection => {
                 pokeCollection.textContent = `Amount in collection ${updatedCollection.collection_amount}` 
             })
-    })
-    
+    })  
 })
 
 //eventlisteners
@@ -67,7 +66,6 @@ newPokeForm.addEventListener('submit',(e) =>{
     favorite: JSON.parse(e.target[4].value),
     pokedex: e.target[5].value
    }
-
    fetch(url, {
         method: "POST",
         headers: {
@@ -113,11 +111,13 @@ function addPokeToPage(pokemon){
     const pokeImage = document.createElement("img")
     const pokeDelBtn = document.createElement('button')
     const divElement = document.createElement('div')
+    const pokeName = document.createElement('h5')
+    pokeName.id = "poke-menu-name"
     pokeDelBtn.textContent = 'Lost in battle'
-    
+    pokeName.textContent = pokemon.name
     pokeImage.src = pokemon.image 
     divElement.append(pokeDelBtn)
-    divElement.append(pokeImage)
+    divElement.append(pokeImage, pokeName)
     pokeList.appendChild(divElement)
 
     pokeImage.addEventListener("click", () => {

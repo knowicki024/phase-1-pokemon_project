@@ -4,6 +4,9 @@ body {
     font-family: "Pokemon Solid";
 }
 
+body h1 {
+    font-size: 35px;
+}
 #logo {
     width: 80px;
 }
@@ -12,12 +15,27 @@ body {
     display: flex;
 }
 
+#pokemon-list div{
+    text-align: center;
+}
+
 #pokemon-list img {
-    width: 200px;
-    height: 200px
+    width: 160px;
+    height: 160px
+}
+
+#poke-image {
+    width: 320px;
+    height: 320px;
 }
 
 div button {
     font-family: 'Exo', sans-serif;
     font-family: 'Exo 2', sans-serif;
+}
+
+#poke-menu-name {
+    font-family: 'Exo', sans-serif;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 20px;
 }

@@ -2,13 +2,13 @@
 
 The Pokemon Collector app is designed with key features to provide users with a seamless and enjoyable experience:
 
-**Create Pokemon (POST):
+**Create Pokemon (POST):**
 Users can easily add new entries to their Pokemon collection, allowing them to build and expand their assortment.
 
 **View Pokemon Collection (GET):**
 A straightforward feature that enables users to view their entire Pokemon collection at a glance, offering a quick overview of their acquired Pokemon.
 
-**Like Pokemon (PATCH):
+**Like Pokemon (PATCH):**
 Users have the ability to express their preferences by liking specific Pokemon, adding a personalized touch to their collection.
 
 **Delete Pokemon (DELETE):**
@@ -20,8 +20,8 @@ Stretch Goals:
 CSS Enhancement:
 Utilize advanced CSS techniques to create an aesthetically pleasing and responsive user interface.
 
-Like Button:
-Implement a 'Like' button functionality, allowing users to express admiration for particular Pokemon and enhancing user engagement.
+Favorite Button:
+Implement a 'Favorite' button functionality, allowing users to express admiration for particular Pokemon and enhancing user engagement.
 
 Pokemon Collection Incrementer:
 Introduce a dynamic feature that enables users to increment the count of specific Pokemon in their collection, adding an interactive element to the app.
