@@ -27,34 +27,17 @@ fetch(url)  //get fetch
         let randomArrayIndex = Math.floor((Math.random() * pokeData.length)) // stretch: render random poke
         pokeDetails(pokeData[randomArrayIndex])  
 })
-//event handler #1
-newPokeForm.addEventListener('submit',(e) =>{
-    e.preventDefault()
-    let newPokeData = 
-    {
-        name: e.target[0].value,
-        type: e.target[1].value,
-        image: e.target[2].value, 
-        collection_amount: Number(e.target[3].value),
-        favorite: Boolean(e.target[4].value),
-        pokedex: e.target[5].value
-   }
-   fetch(url, // post fetch
-    {      
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newPokeData),
-      })
-      .then(response => response.json())
-      .then(newPokeData => {
-        addPokeToMenu(newPokeData)
-        pokeDetails(newPokeData)
-      });
-      newPokeForm.reset()
+
+//submit event handler #1
+newPokeForm.addEventListener('submit', handleNewPokeFormSubmit);
+//#2 event handler focusin/focusout
+newPokeForm.addEventListener('focusin', (e) =>{
+    e.target.style.backgroundColor = 'yellow'
 })
-//event handler #2
+newPokeForm.addEventListener('focusout', (e) =>{
+    e.target.style.backgroundColor = ''   
+})
+//#3 event handler click
 favoriteBtn.addEventListener('click', (e)=>{
     currentPoke.favorite = !currentPoke.favorite
     let updatedFav = {
@@ -94,17 +77,22 @@ function addPokeToMenu(pokemon){
     divElement.append(pokeDelBtn)
     divElement.append(pokeImage, pokeName)
     pokeList.appendChild(divElement)
-    // #3 event handler
+    // event handler click
     pokeImage.addEventListener("click", () => {
         pokeDetails(pokemon)
     })
-    // #4 event handler
-    pokeDelBtn.addEventListener('click', (e) =>{
+    // event handler click
+    pokeDelBtn.addEventListener('click', () =>{
+        alert ("Double Click to delete!")
+    })
+   
+    pokeDelBtn.addEventListener('dblclick', (e) =>{
         fetch(`http://localhost:4000/pokemons/${pokemon.id}`, {
             method: 'DELETE'
         })
             .then(response => {
                 if(response.ok){
+                    console.log(response)
                     pokeDataCopy = pokeDataCopy.filter(p=>{
                         return pokemon.id !== p.id
                     })
@@ -152,5 +140,33 @@ function incrementCollection(){
         .then(resp => resp.json())
         .then(updatedCollection => pokeCollection.textContent = `Amount in collection: ${updatedCollection.collection_amount}` 
         )}
-createIncrementBtn()
 
+function handleNewPokeFormSubmit(e) {
+    e.preventDefault();
+  
+    let newPokeData = {
+      name: e.target[0].value,
+      type: e.target[1].value,
+      image: e.target[2].value,
+      collection_amount: Number(e.target[3].value),
+      favorite: Boolean(e.target[4].value),
+      pokedex: e.target[5].value,
+    };
+  
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newPokeData),
+    })
+      .then(response => response.json())
+      .then(newPokeData => {
+        addPokeToMenu(newPokeData);
+        pokeDetails(newPokeData);
+      });
+  
+    newPokeForm.reset();
+  };
+  
+  createIncrementBtn()

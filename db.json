@@ -6,7 +6,7 @@
       "type": "Grass",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
       "collection_amount": 13,
-      "favorite": true,
+      "favorite": false,
       "pokedex": "0001"
     },
     {
@@ -14,7 +14,7 @@
       "name": "Ivysaur",
       "type": "Grass",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png",
-      "collection_amount": 3,
+      "collection_amount": 9,
       "favorite": false,
       "pokedex": "0002"
     },
@@ -50,7 +50,7 @@
       "name": "Squirtle",
       "type": "Water",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
-      "collection_amount": 1,
+      "collection_amount": 2,
       "favorite": false,
       "pokedex": "0007"
     },
@@ -86,45 +86,18 @@
       "name": "Metapod",
       "type": "Bug",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png",
-      "collection_amount": 1,
+      "collection_amount": 3,
       "favorite": false,
       "pokedex": "0011"
     },
     {
-      "id": 12,
-      "name": "Butterfree",
-      "type": "Bug",
-      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png",
-      "collection_amount": 1,
-      "favorite": true,
-      "pokedex": "0012"
-    },
-    {
-      "id": 13,
-      "name": "Pikachu",
+      "name": "Pikachu ",
       "type": "Electric",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
-      "collection_amount": 1,
-      "favorite": false,
-      "pokedex": "0025"
-    },
-    {
-      "name": "Braviary ",
-      "type": "Flying",
-      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/628.png",
-      "collection_amount": 2,
-      "favorite": false,
-      "pokedex": "0628",
-      "id": 14
-    },
-    {
-      "name": "Vullaby ",
-      "type": "Dark",
-      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/629.png",
       "collection_amount": 2,
       "favorite": true,
-      "pokedex": "0629",
-      "id": 15
+      "pokedex": "0025",
+      "id": 12
     }
   ]
 }

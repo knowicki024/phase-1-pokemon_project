@@ -26,6 +26,10 @@ Implement a 'Favorite' button functionality, allowing users to express admiratio
 Pokemon Collection Incrementer:
 Introduce a dynamic feature that enables users to increment the count of specific Pokemon in their collection, adding an interactive element to the app.
 
+Render Random Pokemon At Page Load:
+Utilize random number generator to implement random rendering at initial page load.
+
+
 
 **Getting Started**
 
