@@ -28,7 +28,6 @@ fetch(url)
     let randomArrayIndex = Math.floor((Math.random() * pokeData.length))
     pokeDetails(pokeData[randomArrayIndex])
 
-
     const pokeIncrementBtn = document.createElement('button')
     const divBtnElement = document.createElement('div')
     pokeIncrementBtn.textContent = ' Add to collection '
@@ -53,8 +52,7 @@ fetch(url)
             .then(updatedCollection => {
                 pokeCollection.textContent = `Amount in collection ${updatedCollection.collection_amount}` 
             })
-    })
-    
+    })  
 })
 
 //eventlisteners
@@ -68,7 +66,6 @@ newPokeForm.addEventListener('submit',(e) =>{
     favorite: JSON.parse(e.target[4].value),
     pokedex: e.target[5].value
    }
-
    fetch(url, {
         method: "POST",
         headers: {
@@ -83,7 +80,6 @@ newPokeForm.addEventListener('submit',(e) =>{
       });
       newPokeForm.reset()
 })
-
  favoriteBtn.addEventListener('click', (e)=>{
     currentPoke.favorite = !currentPoke.favorite
     let updatedFav = {
@@ -96,11 +92,9 @@ newPokeForm.addEventListener('submit',(e) =>{
     })
         .then(resp => resp.json())
         .then(updatedFavorite => {
-            favoriteBtn.textContent = updatedFavorite.favorite? "Unfavorite": "Favorite"
+            favoriteBtn.textContent = updatedFavorite.favorite? "Favorited! Click to unfavorite": "Unfavorited! Click to favorite"
         })    
  })
-
-
 //render functions
 function pokeDetails(pokemon){
     currentPoke = pokemon
@@ -110,19 +104,20 @@ function pokeDetails(pokemon){
     pokeDetailType.textContent = pokemon.type
     pokedexDetailNumber.textContent = "Pokedex: " + pokemon.pokedex
     pokeCollection.textContent = "Amount in collection: " + parseInt(pokemon.collection_amount)
-    favoriteBtn.textContent = pokemon.favorite ? "Unfavorite": "Favorite"
+    favoriteBtn.textContent = pokemon.favorite ? "Favorited! Click to unfavorite": "Unfavorited! Click to favorite"
 
 }
 function addPokeToPage(pokemon){
     const pokeImage = document.createElement("img")
     const pokeDelBtn = document.createElement('button')
     const divElement = document.createElement('div')
+    const pokeName = document.createElement('h5')
+    pokeName.id = "poke-menu-name"
     pokeDelBtn.textContent = 'Lost in battle'
-    
+    pokeName.textContent = pokemon.name
     pokeImage.src = pokemon.image 
     divElement.append(pokeDelBtn)
-    divElement.append(pokeImage)
-
+    divElement.append(pokeImage, pokeName)
     pokeList.appendChild(divElement)
 
     pokeImage.addEventListener("click", () => {
@@ -138,8 +133,6 @@ function addPokeToPage(pokemon){
                     pokeDataCopy = pokeDataCopy.filter(p=>{
                         return pokemon.id !== p.id
                     })
-                    console.log(pokeDataCopy)
-
                     updateImageNav(pokeDataCopy)
                     pokeDetails(pokeDataCopy[0])
                 }
