@@ -1,3 +1,9 @@
+body {
+    background-color: #3466AF;
+    color: #FFCB05;
+    font-family: "Pokemon Solid";
+}
+
 #logo {
     width: 80px;
 }
