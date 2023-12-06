@@ -28,7 +28,6 @@ fetch(url)
     let randomArrayIndex = Math.floor((Math.random() * pokeData.length))
     pokeDetails(pokeData[randomArrayIndex])
 
-
     const pokeIncrementBtn = document.createElement('button')
     const divBtnElement = document.createElement('div')
     pokeIncrementBtn.textContent = ' Add to collection '
@@ -83,7 +82,6 @@ newPokeForm.addEventListener('submit',(e) =>{
       });
       newPokeForm.reset()
 })
-
  favoriteBtn.addEventListener('click', (e)=>{
     currentPoke.favorite = !currentPoke.favorite
     let updatedFav = {
@@ -99,8 +97,6 @@ newPokeForm.addEventListener('submit',(e) =>{
             favoriteBtn.textContent = updatedFavorite.favorite? "Favorited! Click to unfavorite": "Unfavorited! Click to favorite"
         })    
  })
-
-
 //render functions
 function pokeDetails(pokemon){
     currentPoke = pokemon
@@ -122,7 +118,6 @@ function addPokeToPage(pokemon){
     pokeImage.src = pokemon.image 
     divElement.append(pokeDelBtn)
     divElement.append(pokeImage)
-
     pokeList.appendChild(divElement)
 
     pokeImage.addEventListener("click", () => {
@@ -138,8 +133,6 @@ function addPokeToPage(pokemon){
                     pokeDataCopy = pokeDataCopy.filter(p=>{
                         return pokemon.id !== p.id
                     })
-                    console.log(pokeDataCopy)
-
                     updateImageNav(pokeDataCopy)
                     pokeDetails(pokeDataCopy[0])
                 }
