@@ -92,7 +92,6 @@ function addPokeToMenu(pokemon){
         })
             .then(response => {
                 if(response.ok){
-                    console.log(response)
                     pokeDataCopy = pokeDataCopy.filter(p=>{
                         return pokemon.id !== p.id
                     })
@@ -101,10 +100,8 @@ function addPokeToMenu(pokemon){
                 }
                 else{
                     alert('Delete unsuccesful, try again')
-                }
-            })
-    })
-}
+                }})
+})}
 
 function updateImageNav(pokeDataCopy){
    pokeList.innerHTML = ' '
@@ -165,7 +162,6 @@ function handleNewPokeFormSubmit(e) {
         addPokeToMenu(newPokeData);
         pokeDetails(newPokeData);
       });
-  
     newPokeForm.reset();
   };
   

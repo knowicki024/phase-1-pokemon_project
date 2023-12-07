@@ -107,6 +107,15 @@
       "favorite": true,
       "pokedex": "0630",
       "id": 13
+    },
+    {
+      "name": "Vulpix",
+      "type": "Fire",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/037.png",
+      "collection_amount": 1,
+      "favorite": true,
+      "pokedex": "0037",
+      "id": 14
     }
   ]
 }
