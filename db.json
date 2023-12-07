@@ -5,7 +5,7 @@
       "name": "Bulbasaur",
       "type": "Grass",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
-      "collection_amount": 13,
+      "collection_amount": 14,
       "favorite": false,
       "pokedex": "0001"
     },
@@ -68,7 +68,7 @@
       "name": "Blastoise",
       "type": "Water",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png",
-      "collection_amount": 1,
+      "collection_amount": 37,
       "favorite": false,
       "pokedex": "0009"
     },
@@ -94,10 +94,19 @@
       "name": "Pikachu ",
       "type": "Electric",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
-      "collection_amount": 2,
+      "collection_amount": 3,
       "favorite": true,
       "pokedex": "0025",
       "id": 12
+    },
+    {
+      "name": "Mandibuzz ",
+      "type": "Dark",
+      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/630.png",
+      "collection_amount": 1,
+      "favorite": true,
+      "pokedex": "0630",
+      "id": 13
     }
   ]
 }

@@ -1,5 +1,5 @@
 //DOM elements/ variables
-const url = 'http://localhost:4000/pokemons'
+const url = 'http://localhost:5000/pokemons'
 const favoriteBtn = document.querySelector('#favorite-poke')
 const newPokeForm = document.querySelector('#poke-form')
 const pokeDetailName = document.getElementById("name")
@@ -44,7 +44,7 @@ favoriteBtn.addEventListener('click', (e)=>{
         favorite: currentPoke.favorite
     }
     // patch fetch
-    fetch(`http://localhost:4000/pokemons/${currentPoke.id}`,{  
+    fetch(`http://localhost:5000/pokemons/${currentPoke.id}`,{  
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(updatedFav)
@@ -87,7 +87,7 @@ function addPokeToMenu(pokemon){
     })
    
     pokeDelBtn.addEventListener('dblclick', (e) =>{
-        fetch(`http://localhost:4000/pokemons/${pokemon.id}`, {
+        fetch(`http://localhost:5000/pokemons/${pokemon.id}`, {
             method: 'DELETE'
         })
             .then(response => {
@@ -130,7 +130,7 @@ function incrementCollection(){
     let updatedCollectionData = {
             collection_amount : currentCollectionAmt
     }
-    fetch(`http://localhost:4000/pokemons/${currentPoke.id}`,    //2nd patch fetch
+    fetch(`http://localhost:5000/pokemons/${currentPoke.id}`,    //2nd patch fetch
     {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
