@@ -63,7 +63,6 @@ function pokeDetails(pokemon){
     pokedexDetailNumber.textContent = "Pokedex: " + pokemon.pokedex
     pokeCollection.textContent = "Amount in collection: " + parseInt(pokemon.collection_amount)
     favoriteBtn.textContent = pokemon.favorite ? "Favorited! Click to unfavorite": "Unfavorited! Click to favorite"
-
 }
 function addPokeToMenu(pokemon){
     const pokeImage = document.createElement("img")
