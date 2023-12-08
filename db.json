@@ -5,8 +5,8 @@
       "name": "Bulbasaur",
       "type": "Grass",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
-      "collection_amount": 14,
-      "favorite": false,
+      "collection_amount": 22,
+      "favorite": true,
       "pokedex": "0001"
     },
     {
@@ -14,7 +14,7 @@
       "name": "Ivysaur",
       "type": "Grass",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png",
-      "collection_amount": 9,
+      "collection_amount": 68,
       "favorite": false,
       "pokedex": "0002"
     },
@@ -32,7 +32,7 @@
       "name": "Charmeleon",
       "type": "Fire",
       "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png",
-      "collection_amount": 1,
+      "collection_amount": 3,
       "favorite": false,
       "pokedex": "0005"
     },
@@ -98,24 +98,6 @@
       "favorite": true,
       "pokedex": "0025",
       "id": 12
-    },
-    {
-      "name": "Mandibuzz ",
-      "type": "Dark",
-      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/630.png",
-      "collection_amount": 1,
-      "favorite": true,
-      "pokedex": "0630",
-      "id": 13
-    },
-    {
-      "name": "Vulpix",
-      "type": "Fire",
-      "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/037.png",
-      "collection_amount": 1,
-      "favorite": true,
-      "pokedex": "0037",
-      "id": 14
     }
   ]
 }

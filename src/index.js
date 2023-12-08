@@ -80,12 +80,8 @@ function addPokeToMenu(pokemon){
     pokeImage.addEventListener("click", () => {
         pokeDetails(pokemon)
     })
-    // event handler click
-    pokeDelBtn.addEventListener('click', () =>{
-        alert ("Double Click to delete!")
-    })
-   
-    pokeDelBtn.addEventListener('dblclick', (e) =>{
+    
+    pokeDelBtn.addEventListener('click', (e) =>{
         fetch(`http://localhost:5000/pokemons/${pokemon.id}`, {
             method: 'DELETE'
         })
